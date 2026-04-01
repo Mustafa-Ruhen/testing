@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Question</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff6a88, #ffcc70, #6a85ff);
+        }
+
+        .card {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background: green;
+            color: white;
+        }
+
+        #noBtn {
+            background: red;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Do you Love me?</h1>
+
+    <div class="buttons">
+        <button onclick="sayYes()">Yes</button>
+        <button id="noBtn" onmouseover="moveNo()">No</button>
+    </div>
+</div>
+
+<script>
+function sayYes() {
+    alert("I knew it 😄❤️");
+}
+
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</body>
+</html>
